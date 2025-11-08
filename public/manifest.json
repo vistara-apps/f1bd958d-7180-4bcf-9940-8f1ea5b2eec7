@@ -1,0 +1,14 @@
+{
+  "name": "TradeChampion",
+  "description": "TradeChampion is a Base Mini App built with Zara.",
+  "image": "https://dummyimage.com/1200x628/0a0b0d/ffffff.png&text=OG",
+  "external_url": "https://f1bd958d-7180-4bcf-9940-8f1ea5b2eec7.vercel.app",
+  "properties": {
+    "app": {
+      "name": "TradeChampion",
+      "description": "TradeChampion is a Base Mini App built with Zara.",
+      "url": "https://f1bd958d-7180-4bcf-9940-8f1ea5b2eec7.vercel.app",
+      "icon": "https://0co.to/images/zara-2.png"
+    }
+  }
+}

@@ -10,7 +10,7 @@
     "iconUrl": "https://tradechampion.app/icon.png",
     "splashImageUrl": "https://tradechampion.app/splash.png",
     "splashBackgroundColor": "#0a1929",
-    "homeUrl": "https://tradechampion.app",
-    "webhookUrl": "https://tradechampion.app/api/minikit-webhook"
+    "homeUrl": "https://app-a5b2eec7-ll61.vercel.app",
+    "webhookUrl": "https://app-a5b2eec7-ll61.vercel.app/api/webhook"
   }
 }
