@@ -26,7 +26,11 @@ export function TournamentCard({
   const participationPercentage = (participants / maxParticipants) * 100;
 
   return (
-    <div className="bg-surface rounded-lg p-4 shadow-card hover:shadow-button transition-all duration-200 cursor-pointer">
+    <div 
+      className="bg-surface rounded-lg p-4 shadow-card hover:shadow-lg hover:scale-[1.02] transition-all duration-200 cursor-pointer border border-transparent hover:border-primary/20 active:scale-[0.98]"
+      role="article"
+      aria-label={`Tournament: ${name}`}
+    >
       <div className="flex items-start justify-between mb-3">
         <div>
           <h3 className="font-semibold text-base mb-1">{name}</h3>
@@ -64,7 +68,10 @@ export function TournamentCard({
 
         <div className="flex items-center justify-between pt-2">
           <div className="text-sm text-neutral">Entry: {entryFee}</div>
-          <button className="px-4 py-2 bg-primary hover:bg-accent text-white text-sm font-medium rounded-lg transition-all duration-200">
+          <button 
+            className="px-4 py-2 bg-primary hover:bg-accent text-white text-sm font-medium rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+            aria-label={`Join ${name} tournament`}
+          >
             Join Now
           </button>
         </div>

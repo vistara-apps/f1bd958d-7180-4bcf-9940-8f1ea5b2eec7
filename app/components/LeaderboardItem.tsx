@@ -33,9 +33,13 @@ export function LeaderboardItem({
   };
 
   return (
-    <div className={`flex items-center gap-4 p-4 rounded-lg transition-all duration-200 cursor-pointer ${
-      isTopTier ? 'bg-primary/5 hover:bg-primary/10' : 'bg-surface hover:bg-surface/80'
-    }`}>
+    <div 
+      className={`flex items-center gap-4 p-4 rounded-lg transition-all duration-200 cursor-pointer hover:scale-[1.02] active:scale-[0.98] ${
+        isTopTier ? 'bg-primary/5 hover:bg-primary/10 border border-primary/20' : 'bg-surface hover:bg-surface/80'
+      }`}
+      role="listitem"
+      aria-label={`Rank ${rank}: ${username} with ${winRate}% win rate`}
+    >
       <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${getRankColor()}`}>
         {rank}
       </div>

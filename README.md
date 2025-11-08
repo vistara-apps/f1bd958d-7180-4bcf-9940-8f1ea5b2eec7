@@ -69,10 +69,44 @@ This app is built as a Farcaster Mini App with:
 
 ## Design System
 
-- **Theme**: Coinbase (dark navy background, Coinbase blue accents)
+- **Theme**: Coinbase (dark navy background, Coinbase blue accents with gradients)
 - **Colors**: CSS variables for easy theming
 - **Typography**: System fonts with responsive sizing
 - **Components**: Mobile-first, accessible, production-ready
+- **Animations**: Smooth transitions with reduced motion support
+- **Accessibility**: ARIA labels, keyboard navigation, skip links
+
+## Recent UI/UX Improvements
+
+### Wallet Integration
+- ✅ Integrated OnchainKit wallet components with full functionality
+- ✅ Added wallet dropdown with identity, balance, and disconnect options
+- ✅ Configured Smart Wallet support via Coinbase Wallet
+
+### Navigation & Accessibility
+- ✅ Fixed bottom navigation icons (Duels now uses Swords icon)
+- ✅ Added ARIA labels and roles throughout the application
+- ✅ Implemented skip-to-content link for keyboard navigation
+- ✅ Added focus visible styles for better keyboard accessibility
+
+### Visual Enhancements
+- ✅ Enhanced cards with hover states, scale transitions, and borders
+- ✅ Added gradient effects to branding and CTAs
+- ✅ Improved loading states with better animations
+- ✅ Added backdrop blur effects for modern glass-morphism look
+- ✅ Enhanced button interactions with scale and shadow effects
+
+### Animations & Polish
+- ✅ Created loading skeleton components for better perceived performance
+- ✅ Added fade-in animations for content
+- ✅ Implemented reduced motion support for accessibility
+- ✅ Enhanced VS badge animation in duel cards
+- ✅ Added smooth transitions throughout
+
+### Responsive Design
+- ✅ Improved spacing consistency across breakpoints
+- ✅ Enhanced touch targets for mobile interactions
+- ✅ Optimized component layouts for various screen sizes
 
 ## License
 
