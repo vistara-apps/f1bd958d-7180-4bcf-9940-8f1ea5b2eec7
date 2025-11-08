@@ -6,6 +6,7 @@ import { AppShell } from './components/AppShell';
 import { DuelCard } from './components/DuelCard';
 import { TournamentCard } from './components/TournamentCard';
 import { LeaderboardItem } from './components/LeaderboardItem';
+import { PaymentDemo } from './components/PaymentDemo';
 import { Trophy, Swords, TrendingUp } from 'lucide-react';
 
 export default function Home() {
@@ -121,6 +122,11 @@ export default function Home() {
               isGated={false}
             />
           </div>
+        </section>
+
+        {/* Payment Demo */}
+        <section className="px-4">
+          <PaymentDemo />
         </section>
 
         {/* Leaderboard */}
