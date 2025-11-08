@@ -6,6 +6,7 @@ import { AppShell } from './components/AppShell';
 import { DuelCard } from './components/DuelCard';
 import { TournamentCard } from './components/TournamentCard';
 import { LeaderboardItem } from './components/LeaderboardItem';
+import { CardSkeleton, StatSkeleton, LeaderboardSkeleton } from './components/LoadingSkeleton';
 import { Trophy, Swords, TrendingUp } from 'lucide-react';
 
 export default function Home() {
@@ -19,7 +20,12 @@ export default function Home() {
   if (!isReady) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-bg">
-        <div className="animate-pulse text-fg">Loading TradeChampion...</div>
+        <div className="flex flex-col items-center gap-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 animate-pulse">
+            <Trophy className="w-8 h-8 text-primary" />
+          </div>
+          <div className="animate-pulse text-fg text-lg font-medium">Loading TradeChampion...</div>
+        </div>
       </div>
     );
   }
@@ -28,40 +34,45 @@ export default function Home() {
     <AppShell>
       <div className="space-y-6">
         {/* Hero Section */}
-        <section className="text-center py-8 px-4">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 mb-4">
+        <section className="text-center py-8 px-4" role="banner">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 mb-4 animate-pulse">
             <Trophy className="w-8 h-8 text-primary" />
           </div>
-          <h1 className="text-3xl font-bold mb-2">TradeChampion</h1>
-          <p className="text-neutral text-base">
+          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            TradeChampion
+          </h1>
+          <p className="text-neutral text-base max-w-md mx-auto">
             Prove your trading skills. Challenge friends, win crypto.
           </p>
         </section>
 
         {/* Quick Stats */}
-        <section className="grid grid-cols-3 gap-3 px-4">
-          <div className="bg-surface rounded-lg p-4 text-center">
+        <section className="grid grid-cols-3 gap-3 px-4" role="region" aria-label="Statistics">
+          <div className="bg-surface rounded-lg p-4 text-center hover:scale-105 transition-transform duration-200" role="status">
             <div className="text-2xl font-bold text-primary">127</div>
             <div className="text-xs text-neutral mt-1">Active Duels</div>
           </div>
-          <div className="bg-surface rounded-lg p-4 text-center">
+          <div className="bg-surface rounded-lg p-4 text-center hover:scale-105 transition-transform duration-200" role="status">
             <div className="text-2xl font-bold text-accent">$12.5K</div>
             <div className="text-xs text-neutral mt-1">Prize Pool</div>
           </div>
-          <div className="bg-surface rounded-lg p-4 text-center">
+          <div className="bg-surface rounded-lg p-4 text-center hover:scale-105 transition-transform duration-200" role="status">
             <div className="text-2xl font-bold text-success">892</div>
             <div className="text-xs text-neutral mt-1">Traders</div>
           </div>
         </section>
 
         {/* Active Duels */}
-        <section className="px-4">
+        <section className="px-4" role="region" aria-label="Active Duels">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <Swords className="w-5 h-5 text-primary" />
               <h2 className="text-xl font-semibold">Active Duels</h2>
             </div>
-            <button className="text-sm text-primary hover:text-accent transition-colors duration-200">
+            <button 
+              className="text-sm text-primary hover:text-accent transition-colors duration-200 hover:underline"
+              aria-label="View all active duels"
+            >
               View All
             </button>
           </div>
@@ -90,13 +101,16 @@ export default function Home() {
         </section>
 
         {/* Tournaments */}
-        <section className="px-4">
+        <section className="px-4" role="region" aria-label="Tournaments">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <Trophy className="w-5 h-5 text-primary" />
               <h2 className="text-xl font-semibold">Tournaments</h2>
             </div>
-            <button className="text-sm text-primary hover:text-accent transition-colors duration-200">
+            <button 
+              className="text-sm text-primary hover:text-accent transition-colors duration-200 hover:underline"
+              aria-label="View all tournaments"
+            >
               View All
             </button>
           </div>
@@ -124,17 +138,20 @@ export default function Home() {
         </section>
 
         {/* Leaderboard */}
-        <section className="px-4 pb-24">
+        <section className="px-4 pb-24" role="region" aria-label="Leaderboard">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <TrendingUp className="w-5 h-5 text-primary" />
               <h2 className="text-xl font-semibold">Top Traders</h2>
             </div>
-            <button className="text-sm text-primary hover:text-accent transition-colors duration-200">
+            <button 
+              className="text-sm text-primary hover:text-accent transition-colors duration-200 hover:underline"
+              aria-label="View full leaderboard"
+            >
               Full Leaderboard
             </button>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2" role="list" aria-label="Top traders">
             <LeaderboardItem
               rank={1}
               username="TradeGod"

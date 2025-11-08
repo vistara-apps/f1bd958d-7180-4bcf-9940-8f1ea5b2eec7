@@ -30,9 +30,13 @@ export function DuelCard({
   };
 
   return (
-    <div className="bg-surface rounded-lg p-4 shadow-card hover:shadow-button transition-all duration-200 cursor-pointer">
-      <div className="flex items-center justify-between mb-3">
-        <div className={`px-3 py-1 rounded-full text-xs font-medium ${statusColors[status]}`}>
+    <div 
+      className="bg-surface rounded-lg p-4 shadow-card hover:shadow-lg hover:scale-[1.02] transition-all duration-200 cursor-pointer border border-transparent hover:border-primary/20 active:scale-[0.98]"
+      role="article"
+      aria-label={`Duel between ${challengerName} and ${challengedName}`}
+    >
+      <div className="flex items-center justify-between mb-3" role="status">
+        <div className={`px-3 py-1 rounded-full text-xs font-medium ${statusColors[status]} backdrop-blur-sm`}>
           {status.charAt(0).toUpperCase() + status.slice(1)}
         </div>
         <div className="flex items-center gap-1 text-xs text-neutral">
@@ -52,7 +56,7 @@ export function DuelCard({
           </div>
         </div>
 
-        <div className="text-danger text-xl font-bold">VS</div>
+        <div className="text-danger text-xl font-bold animate-pulse">VS</div>
 
         <div className="flex items-center gap-3">
           <div>
